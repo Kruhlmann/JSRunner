@@ -19,8 +19,8 @@ function Player(cW, cH){
   this.update = function(gamespeed){
     //this.x += this.velocity.x * gamespeed;
     //this.y += this.velocity.y * gamespeed;
-    this.x = mouseX - this.w / 2;
-    this.y = mouseY - this.h / 2;
+    if(this.canMove) this.x = mouseX - this.w / 2;
+    if(this.canMove) this.y = mouseY - this.h / 2;
     if(this.x < 0) this.x = 0;
     if(this.x > this.cW - this.w) this.x = this.cW - this.w;
     if(this.y < 0) this.y = 0;

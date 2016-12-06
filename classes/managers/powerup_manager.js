@@ -5,6 +5,7 @@ function PowerupManager(player, VAR_LIB){
   this.player = player;
   this.width = VAR_LIB.width;
   this.height = VAR_LIB.height;
+  this.powerups.push(new Powerup(100, -64, 1, VAR_LIB));
 
   this.xRanges = [];
   this.yRanges = [];

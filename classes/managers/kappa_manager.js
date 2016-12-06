@@ -46,8 +46,10 @@ function KappaManager(player, VAR_LIB){
 
   this.render = function(){
     for(var i = 0; i < this.kappas.length; i ++) {
-      this.kappas[i].render();
       // Uncomment to get kappa debug lines
+      //fill(255, 0, 0);
+      //rect(this.kappas[i].x, this.kappas[i].y, this.kappas[i].w, this.kappas[i].h)
+      this.kappas[i].render();
       //stroke(255, 50, 50);
       //line(this.kappas[i].x, this.kappas[i].y, this.player.x, this.player.y);
     }

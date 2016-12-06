@@ -3,10 +3,12 @@ function Kappa(x, y, tile){
   this.h = 32;
   this.x = x;
   this.y = y;
-  this.tile = loadImage("http://i.imgur.com/4ZFt2bS.png");
+  this.tile = VAR_LIB.kappaTile;
+  this.speedModifier = 1 + Math.random() / 2;
 
   this.update = function(delta){
-    this.y += delta;
+    if(VAR_LIB.gachiMode) this.tile = VAR_LIB.gachiTile;
+    this.y += delta * this.speedModifier;
   }
 
   this.render = function(){

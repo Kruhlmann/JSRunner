@@ -3,10 +3,11 @@ function DansGame(x, y){
   this.h = 32;
   this.x = x;
   this.y = y;
-  this.tile = loadImage("http://i.imgur.com/IpN8MpU.png");
+  this.tile = VAR_LIB.dansGameTile;
   this.speedModifier = 0.5 + Math.random() / 2;
 
   this.update = function(delta){
+    if(VAR_LIB.gachiMode) this.tile = VAR_LIB.gachiTile;
     this.y -= delta * this.speedModifier;
   }
 

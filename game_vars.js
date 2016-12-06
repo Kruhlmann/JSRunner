@@ -4,7 +4,23 @@ function VarLib(){
   this.height = 22 * 32;
   this.occupiedSpaces = [];
   this.score = 0;
+  this.gachiTile = loadImage("http://i.imgur.com/t2g2cS9.png");
+  this.pogChampTile = loadImage("http://i.imgur.com/uowFXmY.png");
+  this.wutFaceTile = loadImage("http://i.imgur.com/D0qDh1V.png");
+  this.kappaTile = loadImage("http://i.imgur.com/4ZFt2bS.png");
+  this.dansGameTile = loadImage("http://i.imgur.com/IpN8MpU.png");
+  this.crosshair = loadImage("http://i.imgur.com/vG1zoyQ.png");
+  this.megaLULTile = loadImage("http://i.imgur.com/alGq6SR.png");
   this.hyperModeTimer = 100;
+  this.gachiTime = 0;
+  this.gachiMode = false;
+  this.music = new Audio('sound/music1.ogg');
+  this.music.loop = true;
+  this.music.play();
+  this.gachiMusic = new Audio('sound/gachimode.ogg');
+  this.highNoon = new Audio('sound/high_noon.ogg');
+  this.mcCreeMiss = new Audio('sound/mccree_miss.ogg');
+  this.mcCreeFire = new Audio('sound/mccree_fire.ogg');
 
   this.managers = [];
 
