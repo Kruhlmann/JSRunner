@@ -8,13 +8,19 @@ function Player(cW, cH){
   this.velocity = {
     x: 0,
     y: 0,
-    base: 2
+    base: 1.5
   }
+  this.isInvunrable = false;
+  this.canInterract = true;
+  this.canMove = true;
+  this.image = loadImage("http://i.imgur.com/vwJyFs4.png");
   this.isAlive = true;
 
   this.update = function(gamespeed){
-    this.x += this.velocity.x * gamespeed;
-    this.y += this.velocity.y * gamespeed;
+    //this.x += this.velocity.x * gamespeed;
+    //this.y += this.velocity.y * gamespeed;
+    this.x = mouseX - this.w / 2;
+    this.y = mouseY - this.h / 2;
     if(this.x < 0) this.x = 0;
     if(this.x > this.cW - this.w) this.x = this.cW - this.w;
     if(this.y < 0) this.y = 0;
@@ -22,8 +28,7 @@ function Player(cW, cH){
   }
 
   this.render = function(){
-    fill(255);
-    rect(this.x, this.y, this.w, this.h);
+    image(this.image, this.x, this.y, this.w, this.h);
   }
 
 }
